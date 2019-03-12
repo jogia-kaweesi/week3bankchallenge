@@ -12,10 +12,9 @@ class BankAccount:
              self.home()
         else:
             print("account is closed")
-#This method enables user open an account by turning the is_open attribute to true on object instantiation.
-    def open(self):
+  def open(self):
         self.is_open = True
-#this is the deposite method.
+        
     def deposit(self, amount):
         if self.is_open==True :
             amount =input("Please enter amount to deposit")
@@ -25,7 +24,6 @@ class BankAccount:
             self.home()
         else:
             print("Account closed cant do any operation")
-#This method only allows user to withdraw money if user has sufficient money on their account, and account status is open.
     def withdraw(self, amount):
         if self.is_open==True :
            amount=input("Please enter amount to withdraw:")
@@ -43,7 +41,6 @@ class BankAccount:
     def close(self):
         self.is_open = False   
         print("\t\tyour account has been closed")
-#This methods displays the main menu that the user uses to interact with.
     def home(self):
         print("**Welcome to success Bank**")
         print("Hi "+ self.account_name.title())
@@ -66,7 +63,6 @@ class BankAccount:
             self.home()
         else:
             print("invalid input")
-#instantiating a classs
 my_account = BankAccount("NAKAWEESI")
 #calling a class method using an object
 my_account.home()
